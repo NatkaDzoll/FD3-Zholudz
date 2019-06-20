@@ -1,0 +1,19 @@
+.item__td, .item__th {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.item__img{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.item__button {
+width: 2em;
+height: 2em;
+}
+
+.itemSelect{
+    background-color: red; 
+
+}
