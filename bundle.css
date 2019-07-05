@@ -1,0 +1,45 @@
+body{
+    background-color: #C4C4C4FF
+}
+
+.CosmeticsList__caption {
+    font-size: 25px;
+    padding: 5px;
+}
+.CosmeticsList__table {
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+  }
+.CosmeticsList__th{
+	text-align: center;
+    background: rgb(240, 202, 14);
+    border: 1px solid black;
+    margin: 5px;
+}.item__td, .item__th {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.item__img{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.delete__button {
+    width: 2em;
+    height: 2em;
+}
+.edit__button {
+    height: 2em;
+}
+    
+.itemSelect{
+    background-color: red; 
+
+}.ItemEdit{
+    position: absolute;
+}
+/*# sourceMappingURL=bundle.css.map*/
