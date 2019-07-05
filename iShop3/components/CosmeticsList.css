@@ -1,0 +1,22 @@
+body{
+    background-color: #C4C4C4FF
+}
+
+.CosmeticsList__caption {
+    font-size: 25px;
+    padding: 5px;
+}
+.CosmeticsList__table {
+    box-align: left;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+  }
+.CosmeticsList__th{
+	text-align: center;
+    background: rgb(240, 202, 14);
+    border: 1px solid black;
+    margin: 5px;
+}
