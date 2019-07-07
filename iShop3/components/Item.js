@@ -1,3 +1,4 @@
+"use strict";
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -18,27 +19,28 @@ class Item extends React.Component {
         itemClassName: PropTypes.string.isRequired,
         cbDeleteItem: PropTypes.func.isRequired,
         cbEditItem: PropTypes.func.isRequired,
-        //selectClass: PropTypes.string.isRequired,
-    }
+        isRedactTime: PropTypes.bool.isRequired,
+    };
 /*----------- ОПРЕДЕЛЯЕМ ВЫБРАННЫЙ ЭЛЕМЕНТ И ПЕРЕДАЕМ РОДИТЕЛЮ ------------*/
     selectedItem = (EO) => {
-       this.props.cbSelectItem(this.props.data);
-    }
+        if(!this.props.isRedactTime){
+           this.props.cbSelectItem(this.props.data)
+        };
+    };
 /*----------- ОПРЕДЕЛЯЕМ ВЫБРАННЫЙ ЭЛЕМЕНТ И ПЕРЕДАЕМ РОДИТЕЛЮ ------------*/
     deletedItem = (EO) => {
         EO.stopPropagation();                   // --------- останавливаем всплытие React события
         this.props.cbDeleteItem(this.props.data.code);
-    }
+    };
     editItem = (EO) => {
         console.log("Вызвали Едит");
         EO.stopPropagation();                   // --------- останавливаем всплытие React события
         this.props.cbEditItem(this.props.data);
-    }
+    };
 
 /*------------------------- РЕНДЕР КОМПОНЕНТА ----------------------------*/
     render() {
-        var itemData = this.props.data;
-        //console.log(itemData);
+        let itemData = this.props.data;
 
         return  (
         <tr key = {itemData.code} 
@@ -46,26 +48,24 @@ class Item extends React.Component {
             onClick = {this.selectedItem}>
             <td className = 'item__td'>{this.props.numb}</td>
             <td className = 'item__td'>{itemData.itemName}</td>
-            <td className = 'item__td'>{itemData.url}
-                
-            </td>
+            <td className = 'item__td'>{itemData.url}</td>
             <td className = 'item__td'>{itemData.price}</td>
             <td className= 'item__td'>{itemData.count}</td>
             <td className = 'item__td'>
-                <input  type = 'button' 
+                <input  type = 'button'
                         className = 'edit__button'
                         onClick = {this.editItem}
-                        value = 'Edit'/>
+                        value = 'Edit'
+                        disabled={this.props.isRedactTime}/>
                         <input  type = 'button' 
                         className = 'delete__button'
                         onClick = {this.deletedItem}
-                        value = 'X'/>
+                        value = 'X'
+                        disabled={this.props.isRedactTime}/>
             </td> 
-           
             </tr>
-            
         )
     }
-};
+}
 
 export default Item;

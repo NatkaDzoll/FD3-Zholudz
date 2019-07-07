@@ -6,10 +6,15 @@
     padding: 5px;
 
 }
-
+.error{
+    position: absolute;
+    color: red;
+    left: 250px;
+}
 .inputList{
     position: absolute;
-    left: 60px; 
+    left: 80px;
+
 }
 .strList{
     margin: 6px;

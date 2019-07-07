@@ -1,4 +1,4 @@
-'use strick'
+"use strict";
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -27,59 +27,120 @@ class CosmeticsList extends React.Component {
             itemSelectClassName: "itemSelect",          
             itemNotSelectClassName: "Item",
             workMode: this.props.startWorkMode,
-            editItems: null
+            editItems: null,
+            isDisabled: false,
+            isRedactTime:false,
         };
 
 /*------------------------------ КРАСИМ ВЫБРАННЫЙ ЭЛЕМЕНТ --------------------------*/
     selectItem = (item) => {
-        this.setState({ itemSelectNumb: item.code, });       // ------------- устанавливаем в state key выбранного элемента
-        console.log('выбран элемент с code: ' + item.code);
-        this.setState({  
+        this.setState({
+            itemSelectNumb: item.code,
             workMode: 3,                                                   // ------- перезаписываем отфильтрованный массив в state
             editItems: item,
-    })
+        });       // ------------- устанавливаем в state key выбранного элемента
+        //console.log('выбран элемент с code: ' + item.code)
     };
 
 /*--------------------- УДАЛЕНИЕ ПО КНОПКЕ ТОВАРА ИЗ СПИСКА ------------------------*/
     deleteItem = (itemCode) => {
-        var confirmQuestion = confirm("Вы уверены что хотите удалить этот товар?");
+        let confirmQuestion = confirm("Вы уверены что хотите удалить этот товар?");
         if (confirmQuestion) {
-            var filteredItems = this.state.items.filter(el => el.code !== itemCode);  // ------- удаляем из массива элемент если его key совпадают с itemKey
-                this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
+            let filteredItems = this.state.items.filter(el => el.code !== itemCode);  // ------- удаляем из массива элемент если его key совпадают с itemKey
+                this.setState({
+                    workMode: 0,// ------- перезаписываем отфильтрованный массив в state
                     items: filteredItems,
-            })
+                    editItems: null,
+
+            });
             console.log('выбран элемент с code: ' + itemCode + ' был удален');
         }
     };
-/*--------------------- РЕДАКТИРОВАНИЕ ПО КНОПКЕ ТОВАРА ИЗ СПИСКА ------------------------*/
+/*--------------------- ОТОБРАЖЕНИЕ КАРТОЧКИ РЕДАКТИРОВАНИЕ ПО КНОПКЕ ТОВАРА ИЗ СПИСКА ------------------------*/
     editItem = (item) => {
         this.setState({  
                 workMode: 1,                                                   // ------- перезаписываем отфильтрованный массив в state
                 editItems: item,
                 itemSelectNumb: null
         })
-    }
-    addItem = (item) => {
-        this.setState({  
-            workMode: 1,                                                   // ------- перезаписываем отфильтрованный массив в state
-            editItems: item,
-        })        
-        console.log('поменяли воркмоде и меняем вид компонента')            
-    }
+    };
+
+    addItem = (isVal) => {
+        this.setState({
+            workMode: 2,                                                   // ------- перезаписываем отфильтрованный массив в state
+            isRedactTime: isVal,
+            itemSelectNumb: null
+        })
+    };
+    isRedactTime = (_value) =>{
+        this.setState({isRedactTime: _value})
+    };
+/*----------------- ИЗМЕНЕНИЕ СПИСКА ПРИ ДОБАВЛЕНИИ ИЛИ РЕДАКТИРОВАНИИ ТОВАРА -----------*/
+    editItemList = (item) => {
+
+        let filteredItem = this.state.items.map(el => {
+            //console.log(el);
+            if(el.code === item.code){
+                el.price =  item.price;
+                el.count =  item.count;
+                el.itemName = item.itemName;
+            }
+            return el;
+        });
+
+          // ------- удаляем из массива элемент если его key совпадают с itemKey
+        this.setState({
+            // ------- перезаписываем отфильтрованный массив в state
+            items: filteredItem,
+            workMode: 0,
+        });
+        //console.log('поменяли воркмоде и меняем вид компонента')
+        //console.log(this.state.items)
+    };
+
+
+    addItemToList = (item) => {
+        let filteredItem = this.state.items.map(el => {
+            console.log(el);
+            return el;
+        });
+
+        console.log(filteredItem);
+
+        // ------- удаляем из массива элемент если его key совпадают с itemKey
+        this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
+            items: filteredItem,
+            workMode: 2,
+        });
+
+        /*let filteredItem = this.state.items.filter(el => el.code !== item.code);
+                filteredItem.push(item);
+                console.log(filteredItem);*/
+        //let filItem = this.state.items.filter(el => el.code === item.code);
+        //filteredItem.push(item);
+    };
+    cancel = () =>{
+        this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
+
+            workMode: 0,
+        });
+    };
+
 /*----------------------------- РЕНДЕР КОМПОНЕНТА ---------------------------------*/
     render() {
 
-        var itemList = this.state.items.map((el, i) => 
+        let itemList = this.state.items.map((el, i) =>
             <Item   key = {el.code}
-                    code = {el.code}                  
+                    code = {el.code?el.code:11}
                     numb = {i+1}
                     data = {el}
                     cbSelectItem = {this.selectItem}
                     cbDeleteItem =  {this.deleteItem}
                     cbEditItem = {this.editItem}
                     itemClassName = {(this.state.itemSelectNumb == el.code)?this.state.itemSelectClassName:this.state.itemNotSelectClassName}
+                    isRedactTime = {this.state.isRedactTime}
             />
-        )
+        );
 
         let arr = [];
         arr.push( 
@@ -99,16 +160,21 @@ class CosmeticsList extends React.Component {
             {itemList}
             </tbody>
         </table>
-        )
-        console.log(this.state.workMode)
+        );
+        //console.log(this.state.editItems);
+
         arr.push(
-            <CardItem   key = 'CardItem'
-                        data = {this.state.editItems} 
+            <CardItem   key = {this.state.editItems?this.state.editItems:this.state.editItems}
+                        data = {this.state.editItems?this.state.editItems:this.state.workMode}
                         workMode = {this.state.workMode}
-                        cbAddItem = {this.addItem}/>
-        )
-        //console.log(this.state.editItems.itemName)
-        
+                        cbEditItemList = {this.editItemList}
+                        cbAddItemToList = {this.addItemToList}
+                        cbCancel = {this.cancel}
+                        cbAddItem = {this.addItem}
+                        cbIsRedactTime= {this.isRedactTime}
+            />
+        );
+
         return (
             <React.Fragment>
                 {arr}
