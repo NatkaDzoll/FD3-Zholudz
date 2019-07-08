@@ -25,7 +25,7 @@ class Item extends React.Component {
     selectedItem = (EO) => {
         if(!this.props.isRedactTime){
            this.props.cbSelectItem(this.props.data)
-        };
+        }
     };
 /*----------- ОПРЕДЕЛЯЕМ ВЫБРАННЫЙ ЭЛЕМЕНТ И ПЕРЕДАЕМ РОДИТЕЛЮ ------------*/
     deletedItem = (EO) => {

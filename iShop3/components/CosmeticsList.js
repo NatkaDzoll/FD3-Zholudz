@@ -17,7 +17,6 @@ class CosmeticsList extends React.Component {
         itemSelectClassName: PropTypes.string,    // ------------- className выбранного товара  
         itemNotSelectClassName: PropTypes.string, //-------------- className не выбранного товара
         editItems: PropTypes.array,
-        
     };
 
 /*---------------------- ИНИЦИАЛИЗИРУЕМ СОСТОЯНИЕ КОМПОНЕНТА -----------------------*/
@@ -28,10 +27,14 @@ class CosmeticsList extends React.Component {
             itemNotSelectClassName: "Item",
             workMode: this.props.startWorkMode,
             editItems: null,
-            isDisabled: false,
             isRedactTime:false,
+            lastCode: 11,
         };
+    lastCodeChange = (code) => {
+        this.setState( {lastCode: code,
+        })
 
+    };
 /*------------------------------ КРАСИМ ВЫБРАННЫЙ ЭЛЕМЕНТ --------------------------*/
     selectItem = (item) => {
         this.setState({
@@ -65,63 +68,40 @@ class CosmeticsList extends React.Component {
         })
     };
 
-    addItem = (isVal) => {
+    addItem = (EO) => {
         this.setState({
             workMode: 2,                                                   // ------- перезаписываем отфильтрованный массив в state
-            isRedactTime: isVal,
-            itemSelectNumb: null
+            isRedactTime: false,
+            itemSelectNumb: null,
+            editItems: this.state.item,
         })
     };
+
     isRedactTime = (_value) =>{
         this.setState({isRedactTime: _value})
     };
 /*----------------- ИЗМЕНЕНИЕ СПИСКА ПРИ ДОБАВЛЕНИИ ИЛИ РЕДАКТИРОВАНИИ ТОВАРА -----------*/
+
     editItemList = (item) => {
-
-        let filteredItem = this.state.items.map(el => {
-            //console.log(el);
-            if(el.code === item.code){
-                el.price =  item.price;
-                el.count =  item.count;
-                el.itemName = item.itemName;
-            }
-            return el;
+        let filteredItem = this.state.items.map((el) => {
+            return el.code === item.code ? item : el;  // ------ если значения code совпадают, то меняет на item
         });
-
-          // ------- удаляем из массива элемент если его key совпадают с itemKey
         this.setState({
             // ------- перезаписываем отфильтрованный массив в state
             items: filteredItem,
             workMode: 0,
         });
-        //console.log('поменяли воркмоде и меняем вид компонента')
-        //console.log(this.state.items)
     };
-
 
     addItemToList = (item) => {
-        let filteredItem = this.state.items.map(el => {
-            console.log(el);
-            return el;
+         this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
+            items:  [...this.state.items, item],
+            workMode: 0,
         });
-
-        console.log(filteredItem);
-
-        // ------- удаляем из массива элемент если его key совпадают с itemKey
-        this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
-            items: filteredItem,
-            workMode: 2,
-        });
-
-        /*let filteredItem = this.state.items.filter(el => el.code !== item.code);
-                filteredItem.push(item);
-                console.log(filteredItem);*/
-        //let filItem = this.state.items.filter(el => el.code === item.code);
-        //filteredItem.push(item);
     };
+
     cancel = () =>{
         this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
-
             workMode: 0,
         });
     };
@@ -163,18 +143,30 @@ class CosmeticsList extends React.Component {
         );
         //console.log(this.state.editItems);
 
-        arr.push(
-            <CardItem   key = {this.state.editItems?this.state.editItems:this.state.editItems}
-                        data = {this.state.editItems?this.state.editItems:this.state.workMode}
-                        workMode = {this.state.workMode}
-                        cbEditItemList = {this.editItemList}
-                        cbAddItemToList = {this.addItemToList}
-                        cbCancel = {this.cancel}
-                        cbAddItem = {this.addItem}
-                        cbIsRedactTime= {this.isRedactTime}
-            />
-        );
-
+        if(this.state.workMode === 3 || this.state.workMode === 0) {
+            arr.push(
+                <div key='add__button'
+                     className='add__button'>
+                    <input  type='button'
+                            onClick = {this.addItem}
+                            value ='Add product'/>
+                </div>
+            )
+        }
+        if(this.state.workMode >0){
+            arr.push(
+                <CardItem   key = "CardItem"
+                            item = {this.state.editItems}
+                            workMode = {this.state.workMode}
+                            lastCode = {this.state.lastCode}
+                            cbEditItemList = {this.editItemList}
+                            cbAddItemToList = {this.addItemToList}
+                            cbCancel = {this.cancel}
+                            cbIsRedactTime= {this.isRedactTime}
+                            cbLastCodeChange = {this.lastCodeChange}
+                />
+            )
+        }
         return (
             <React.Fragment>
                 {arr}
