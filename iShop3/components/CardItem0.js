@@ -34,73 +34,68 @@ class CardItem extends React.Component {
         countValid: this.props.item?!!this.props.item.count:false,
         priceValid: this.props.item?!!this.props.item.price:false,
         urlValid: this.props.item?!!this.props.item.url:false,
-        formValid: false,
         isDisabled: true,  // ----------- кнопка не доступна
 
      };
 
-    validateFields = (name, value) =>{
-
-        let itemNameValid = this.state.itemNameValid;
-        let countValid = this.state.countValid;
-        let priceValid = this.state.priceValid;
-        let urlValid = this.state.urlValid;
-
-        switch(name) {
-            case "itemName":
-                itemNameValid = (value.length>3)&&true;
-                break;
-            case "count":
-                countValid = (value)&&true;
-                break;
-            case "price":
-                priceValid = (value)&&true;
-                break;
-            case "url":
-                urlValid = (value)&&true;
-                break;
+    /*validStr = (_name, _value) => {
+        if (_value) { //---------- если поле вводимое пустое
+            this.setState({[_name + "Valid"]: true, })
         }
-        this.setState({
-            itemNameValid: itemNameValid,
-            countValid: countValid,
-            priceValid:priceValid,
-            urlValid:urlValid
-        }, this.validateForm);
-    };
+        else {
+            this.setState({ [_name + "Valid"]: false, })
+        }
+        if ((this.state.itemNameValid)&&
+            (this.state.countValid)&&
+            (this.state.priceValid)&&
+            (this.state.urlValid)){
+            return false}
+        else {
+            return true
+        }
+    };*/
 
-validateForm() {
-    this.setState({formValid: this.state.itemNameValid &&
-            this.state.countValid&&
-            this.state.priceValid&&
-            this.state.urlValid
-    });
-}
+
+    validationFields = (arr) =>{
+
+        let arra = arr.map((el) => {
+            console.log(el)
+            console.log(el.key)
+        })
+    };
     handleChangeString = (EO) => {
-        const NAME = EO.target.name;
-        const VALUE = EO.target.value;
+        EO.stopPropagation();
+
+        let item = this.state.item.map
+        console.log(item)
+    this.validationFields(item);
+
+        /*   let valid = this.validStr(EO.target.name, EO.target.value);
         this.setState({
             item : {
                 ...this.state.item,                   // ------ в стейте есть item, присвоить ему значения из this.state.item
-                [NAME]:VALUE}},     // ----- и добавить еще это значене
-                        () => { this.validateFields(NAME, VALUE)})
+                [EO.target.name]:EO.target.value,       // ----- и добавить еще это значене
+            },
+            isDisabled: valid
+        });*/
         this.props.cbIsRedactTime(true);                //------ передаем родителю запрет на кнопки
     };
 
     handleChangeNumber = (EO) => {
-        const NAME = EO.target.name;
-        const VALUE = EO.target.value;
-        this.setState({
-                item : {
-                    ...this.state.item,                   // ------ в стейте есть item, присвоить ему значения из this.state.item
-                    [NAME]:parseFloat(VALUE)}},     // ----- и добавить еще это значене
-            () => { this.validateFields(NAME, VALUE)})
+        EO.stopPropagation();
+        let valid = this.validStr(EO.target.name, EO.target.value);
+        this.setState({item : {
+             ...this.state.item,                               // ------ в стейте есть item, присвоить ему значения из this.state.item\
+                [EO.target.name]:parseFloat(EO.target.value)},  // ----- и добавить еще это значене
+            isDisabled: valid
+        });
         this.props.cbIsRedactTime(true);                        //------ передаем родителю запрет на кнопки
     };
 
     handleClickSave = (EO) =>{
         EO.stopPropagation();
         this.setState({
-            formValid: false,
+            isDisabled: false,
         });
         if(this.props.workMode === 1){
             this.props.cbEditItemList(this.state.item);
@@ -115,7 +110,7 @@ validateForm() {
     handleClickCancel = (EO) =>{
         EO.stopPropagation();
         this.props.cbCancel(this.state.item);
-        this.setState({ formValid: false });
+        this.setState({ isDisabled: false });
         this.props.cbIsRedactTime(false);
     };
     // handleSubmit = (EO) =>{
@@ -160,7 +155,7 @@ validateForm() {
                         {this.createInput("price", itemData.price, "number", this.state.priceValid)}
                         {this.createInput("count", itemData.count, "number", this.state.countValid)}
 
-                        <input type="button" value="Save" onClick = {this.handleClickSave} disabled={!this.state.formValid}/>
+                        <input type="button" value="Save" onClick = {this.handleClickSave} disabled={this.state.isDisabled}/>
                         <input type="button" value="Cancel" onClick = {this.handleClickCancel}/>
                     </form>
                 )
@@ -183,7 +178,7 @@ validateForm() {
                         {this.createInput("price", "", "number", this.state.priceValid)}
                         {this.createInput("count", "", "number", this.state.countValid)}
 
-                        <input type="button" value="Save" onClick = {this.handleClickSave} disabled={!this.state.formValid}/>
+                        <input type="button" value="Save" onClick = {this.handleClickSave} disabled={this.state.isDisabled}/>
                         <input type="button" value="Cancel" onClick = {this.handleClickCancel}/>
                     </form>
                 )

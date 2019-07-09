@@ -31,9 +31,7 @@ class CosmeticsList extends React.Component {
             lastCode: 11,
         };
     lastCodeChange = (code) => {
-        this.setState( {lastCode: code,
-        })
-
+        this.setState( {lastCode: code,    })
     };
 /*------------------------------ КРАСИМ ВЫБРАННЫЙ ЭЛЕМЕНТ --------------------------*/
     selectItem = (item) => {
@@ -54,7 +52,6 @@ class CosmeticsList extends React.Component {
                     workMode: 0,// ------- перезаписываем отфильтрованный массив в state
                     items: filteredItems,
                     editItems: null,
-
             });
             console.log('выбран элемент с code: ' + itemCode + ' был удален');
         }
@@ -94,16 +91,14 @@ class CosmeticsList extends React.Component {
     };
 
     addItemToList = (item) => {
-         this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
+         this.setState({                                      // ------- перезаписываем отфильтрованный массив в state
             items:  [...this.state.items, item],
             workMode: 0,
         });
     };
 
     cancel = () =>{
-        this.setState({                                                     // ------- перезаписываем отфильтрованный массив в state
-            workMode: 0,
-        });
+        this.setState({     workMode: 0,   });                // ------- перезаписываем отфильтрованный массив в state
     };
 
 /*----------------------------- РЕНДЕР КОМПОНЕНТА ---------------------------------*/
@@ -153,6 +148,7 @@ class CosmeticsList extends React.Component {
                 </div>
             )
         }
+
         if(this.state.workMode >0){
             arr.push(
                 <CardItem   key = "CardItem"
