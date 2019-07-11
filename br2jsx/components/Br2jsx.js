@@ -9,9 +9,9 @@ function Br2jsx (props) {
   let reg = /<br\s*\/*>/;
   let textArr = props.text.split(reg);
 
-  let finalTextArr = textArr.map((el, i, arr) => {
-      if (i !==  arr.length-1 ) {
-        return <React.Fragment>{el}<br/></React.Fragment>
+  let finalTextArr = textArr.map((el, i) => {
+      if (i) {
+        return <React.Fragment><br/>{el}</React.Fragment>
       }
       else {
         return <React.Fragment>{el}</React.Fragment>
