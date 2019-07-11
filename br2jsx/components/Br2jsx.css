@@ -1,0 +1,11 @@
+.Br2jsx {
+    display: table-cell;
+    background-color: #2f4f4f;
+    color: #c8edf7 ;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+}

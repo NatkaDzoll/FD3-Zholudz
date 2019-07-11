@@ -1,0 +1,31 @@
+{
+  "name": "br2jsx",
+  "version": "1.0.0",
+  "description": "Разбиваем текст тегами <br/>",
+  "main": "App.js",
+  "scripts": {
+    "build": ".\\node_modules\\.bin\\webpack",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "events": "^3.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "lite-server": "^2.3.0",
+    "webpack": "^3.8.1",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^2.11.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
