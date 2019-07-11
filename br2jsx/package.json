@@ -1,7 +1,7 @@
 {
   "name": "br2jsx",
   "version": "1.0.0",
-  "description": "Разбиваем текст тегами <br/>",
+  "description": "Разбиваем текст тегом <br>",
   "main": "App.js",
   "scripts": {
     "build": ".\\node_modules\\.bin\\webpack",
