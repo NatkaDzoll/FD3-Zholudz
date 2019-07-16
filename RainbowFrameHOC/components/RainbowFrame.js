@@ -11,7 +11,7 @@ function RainbowFrame () {
   let colors = ['red','orange', 'yellow','green', '#00BFFF', 'blue', 'purple'];
   let FramedFragment= withRainbowFrame(colors)(Fragment);
     return(
-      <FramedFragment colors={colors}>
+      <FramedFragment>
         Hello!
       </FramedFragment>)
 }
