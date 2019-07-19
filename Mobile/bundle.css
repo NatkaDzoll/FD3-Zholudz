@@ -1,0 +1,89 @@
+tr.MobClient{
+    border-top: solid #e4e4e4 1px;
+}
+td.MobClient{
+    min-width: 100px;
+    padding: 10px;
+    margin: auto;
+}
+span.MobClientBalance{
+    float: right;
+    width: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+td.active{
+    min-width: 100px;
+    padding: 10px;
+    background: rgba(40, 167, 69, 0.83);
+}
+td.blocked{
+    min-width: 100px;
+    padding: 10px;
+    background: rgba(220, 53, 69, 0.86);
+}
+.EditListTitle{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    padding: 15px
+}
+.add__button{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+/*.error{
+    position: absolute;
+    color: red;
+    left: 250px;
+}*/
+.inputList{
+    position: absolute;
+    left: 80px;
+
+}
+.strList{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    margin: 6px;
+}
+table.MobCompany{
+    border-collapse: collapse;
+
+}
+.MobCompany{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+tr.MobCompany{
+    border-bottom: solid #e4e4e4 2px;
+    border-top: solid #e4e4e4 1px;
+}
+th.MobCompany{
+    padding: 10px;
+}
+caption.MobCompany
+{
+    /*border: double gray 3px;*/
+   /* width: 400px;*/
+    padding: 3px 7px;
+   /*background-color: lightyellow;*/
+}
+div.MobCompany{
+    font-size: 15px;
+}
+div.MobCompanyControl{
+    width: 853px;
+    border-bottom: solid #e4e4e4 1px;
+    padding: 10px 0;
+    margin: 10px 0;
+    }
+
+.MobCompanyName{
+    font-weight: bold;
+}
+input.MobCompany{
+    height: 30px;
+}
+
+/*# sourceMappingURL=bundle.css.map*/
