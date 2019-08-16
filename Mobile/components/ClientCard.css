@@ -1,0 +1,24 @@
+.EditListTitle{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    padding: 15px
+}
+.add__button{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+/*.error{
+    position: absolute;
+    color: red;
+    left: 250px;
+}*/
+.inputList{
+    position: absolute;
+    left: 80px;
+
+}
+.strList{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    margin: 6px;
+}

@@ -1,0 +1,24 @@
+tr.MobClient{
+    border-top: solid #e4e4e4 1px;
+}
+td.MobClient{
+    min-width: 100px;
+    padding: 10px;
+    margin: auto;
+}
+span.MobClientBalance{
+    float: right;
+    width: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+td.active{
+    min-width: 100px;
+    padding: 10px;
+    background: rgba(40, 167, 69, 0.83);
+}
+td.blocked{
+    min-width: 100px;
+    padding: 10px;
+    background: rgba(220, 53, 69, 0.86);
+}

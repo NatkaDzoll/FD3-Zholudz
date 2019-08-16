@@ -1,0 +1,39 @@
+table.MobCompany{
+    border-collapse: collapse;
+
+}
+.MobCompany{
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+tr.MobCompany{
+    border-bottom: solid #e4e4e4 2px;
+    border-top: solid #e4e4e4 1px;
+}
+th.MobCompany{
+    padding: 10px;
+}
+caption.MobCompany
+{
+    /*border: double gray 3px;*/
+   /* width: 400px;*/
+    padding: 3px 7px;
+   /*background-color: lightyellow;*/
+}
+div.MobCompany{
+    font-size: 15px;
+}
+div.MobCompanyControl{
+    width: 853px;
+    border-bottom: solid #e4e4e4 1px;
+    padding: 10px 0;
+    margin: 10px 0;
+    }
+
+.MobCompanyName{
+    font-weight: bold;
+}
+input.MobCompany{
+    height: 30px;
+}
