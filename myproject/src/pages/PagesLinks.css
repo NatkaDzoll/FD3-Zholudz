@@ -1,0 +1,49 @@
+.PageLink_Logo{
+    margin: 1vw;
+    float: left;
+    height: 5vh;
+}
+.PageLink {
+    flex-grow: 0.1;
+    min-width: 90px;
+    text-decoration: none;
+    color: #405acc;;
+    font-size: calc(9px + 1vmin);
+}
+.PageLinkPreview{
+    flex-grow: 0.1;
+    min-width: 90px;
+    text-decoration: none;
+    color: #405acc;;
+    font-size: calc(9px + 1vmin);
+    visibility: hidden;
+}
+.ActivePageLinkPreview{
+    visibility: visible;
+    background: rgb(64, 90, 204);
+    color: white;
+    font-weight: bold;
+    border:  #405acc solid 0px;
+}
+.PageLinkMain{
+    padding-right: 10px;
+    float: left;
+    flex-grow: 0.01;
+    font-weight: bold;
+    font-size: smaller;
+    color: #405acc;
+    text-decoration: none;
+}
+.PageButton{
+    font-size: smaller;
+    padding: 1vh;
+    margin: 1vh;
+    border:  #405acc solid 4px;
+}
+.ActivePageLink {
+    background: rgb(64, 90, 204);
+    color: white;
+    font-weight: bold;
+    border:  #405acc solid 0px;
+/*    float: left;*/
+}

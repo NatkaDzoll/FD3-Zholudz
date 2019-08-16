@@ -1,0 +1,668 @@
+[
+  {
+    "id": 101,
+    "department": "Grado",
+    "fio": "Потаев Г.А.",
+    "position": "зав. каф.",
+    "rank": "проф."
+  },
+  {
+    "id": 102,
+    "department": "Grado",
+    "fio": "Чантурия Ю.В.",
+    "position": "докт. арх.",
+    "rank": "проф."
+  },
+  {
+    "id": 103,
+    "department": "Grado",
+    "fio": "Вашккевич В.В.",
+    "position": "канд. арх",
+    "rank": "доц."
+  },
+  {
+    "id": 104,
+    "department": "Grado",
+    "fio": "Протасова Ю.А.",
+    "position": "канд. арх",
+    "rank": "доц."
+  },
+  {
+    "id": 105,
+    "department": "Grado",
+    "fio": "Нитиевская Е.Е.",
+    "position": "канд. арх",
+    "rank": "доц."
+  },
+  {
+    "id": 106,
+    "department": "Grado",
+    "fio": "Сысоева В.А.",
+    "position": "канд. арх",
+    "rank": "доц."
+  },
+  {
+    "id": 107,
+    "department": "Grado",
+    "fio": "Вардеванян П.Г.",
+    "position": "маг.",
+    "rank": "ст. преп. "
+  },
+  {
+    "id": 108,
+    "department": "Grado",
+    "fio": "Питиримов Г.С.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 109,
+    "department": "Grado",
+    "fio": "Боярина Г.П.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 110,
+    "department": "Grado",
+    "fio": "Костяшов А.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 111,
+    "department": "Grado",
+    "fio": "Януш А.П.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 112,
+    "department": "Grado",
+    "fio": "Жолудь Н.И.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 113,
+    "department": "Grado",
+    "fio": "Эльяшевич И.Ю.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 114,
+    "department": "Grado",
+    "fio": "Дроботова Н.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+
+
+  {
+    "id": 201,
+    "department": "PromBuild",
+    "fio": "Морозова А.А.",
+    "position": "зав. каф.",
+    "rank": "проф."
+  },
+  {
+    "id": 202,
+    "department": "PromBuild",
+    "fio": "Сысоева О.И.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 203,
+    "department": "PromBuild",
+    "fio": "Залесская А.А.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 204,
+    "department": "PromBuild",
+    "fio": "Пинчук А.А.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 205,
+    "department": "PromBuild",
+    "fio": "Жаркеви Д.В.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 206,
+    "department": "PromBuild",
+    "fio": "Рачевич Т.Е.",
+    "position": "маг.",
+    "rank": "сп.преп."
+  },
+  {
+    "id": 207,
+    "department": "PromBuild",
+    "fio": "Манкевич С.В.",
+    "position": "маг.",
+    "rank": "сп.преп."
+  },
+  {
+    "id": 208,
+    "department": "PromBuild",
+    "fio": "Семенюк А.А.",
+    "position": "маг.",
+    "rank": "сп.преп."
+  },
+  {
+    "id": 209,
+    "department": "PromBuild",
+    "fio": "Галимович А.Б.",
+    "position": "маг.",
+    "rank": "сп.преп."
+  },
+  {
+    "id": 210,
+    "department": "PromBuild",
+    "fio": "Миндюк Е.Г.",
+    "position": "маг.",
+    "rank": "сп.преп."
+  },
+  {
+    "id": 211,
+    "department": "PromBuild",
+    "fio": "Шиковец А.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 212,
+    "department": "PromBuild",
+    "fio": "Долинина О.Е.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 213,
+    "department": "PromBuild",
+    "fio": "Прокопов Д.Н.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 214,
+    "department": "PromBuild",
+    "fio": "Ковальчук О.И.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 215,
+    "department": "PromBuild",
+    "fio": "Шиян О.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+
+  {
+    "id": 301,
+    "department": "ComBuild",
+    "fio": "Лазовская Н.А.",
+    "position": "зав. каф.",
+    "rank": "доц."
+  },
+  {
+    "id": 302,
+    "department": "ComBuild",
+    "fio": "Сергачев С.А.",
+    "position": "докт. арх.",
+    "rank": "проф."
+  },
+  {
+    "id": 303,
+    "department": "ComBuild",
+    "fio": "Мазаник А.В.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 304,
+    "department": "ComBuild",
+    "fio": "Рак Т.А.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 305,
+    "department": "ComBuild",
+    "fio": "Ситникова И.О.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 306,
+    "department": "ComBuild",
+    "fio": "Арабей В.Г.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 307,
+    "department": "ComBuild",
+    "fio": "Волович О.А.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 308,
+    "department": "ComBuild",
+    "fio": "Горунов В.В.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 309,
+    "department": "ComBuild",
+    "fio": "Григорьева Н.А.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 310,
+    "department": "ComBuild",
+    "fio": "Молокович Г.Е.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 311,
+    "department": "ComBuild",
+    "fio": "Шайкова О.В.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 312,
+    "department": "ComBuild",
+    "fio": "Лаврецкий Н.Г.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 313,
+    "department": "ComBuild",
+    "fio": "Шестак Ю.Т.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 314,
+    "department": "ComBuild",
+    "fio": "Книга Е.Н.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 315,
+    "department": "ComBuild",
+    "fio": "Сулименко П.Д.",
+    "position": "маг.",
+    "rank": "ассист."
+},
+  {
+    "id": 316,
+    "department": "ComBuild",
+    "fio": "Степанова А.Н.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 317,
+    "department": "ComBuild",
+    "fio": "Матюхина К.С.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 318,
+    "department": "ComBuild",
+    "fio": "Киселева М.С.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 319,
+    "department": "ComBuild",
+    "fio": "Волчик А.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 401,
+    "department": "TheoryArch",
+    "fio": "Морозов В. Ф.",
+    "position": "зав. каф.",
+    "rank": "проф."
+  },
+  {
+    "id": 402,
+    "department": "TheoryArch",
+    "fio": "Дубовицкая Г.А.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 403,
+    "department": "TheoryArch",
+    "fio": "Колосовская А.Н.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 404,
+    "department": "TheoryArch",
+    "fio": "Лаврецкий Г.А.",
+    "position": "канд. арх.",
+    "rank": "доц."
+  },
+  {
+  "id": 405,
+  "department": "TheoryArch",
+  "fio": "Белогорцева Н.С.",
+  "position": "маг.",
+  "rank": "ст. преп."
+},
+  {
+    "id": 406,
+    "department": "TheoryArch",
+    "fio": "Марченкова И.А.",
+    "position": "канд. арх.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 407,
+    "department": "TheoryArch",
+    "fio": "Чижик И.А.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 408,
+    "department": "TheoryArch",
+    "fio": "Ожешковская И.Н.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 409,
+    "department": "TheoryArch",
+    "fio": "Лебедева Н.Н.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 410,
+    "department": "TheoryArch",
+    "fio": "Радзевич И.Р.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 411,
+    "department": "TheoryArch",
+    "fio": "Матвеева Е.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 412,
+    "department": "TheoryArch",
+    "fio": "Нисс Е.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 413,
+    "department": "TheoryArch",
+    "fio": "Забелло Р.А.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+
+  {
+    "id": 501,
+    "department": "PainDraw",
+    "fio": "Киреев Н.В.",
+    "position": "зав. каф.",
+    "rank": "проф."
+  },
+  {
+    "id": 502,
+    "department": "PainDraw",
+    "fio": "Колосенцева А.Н.",
+    "position": "зав. науч. раб.",
+    "rank": "доц."
+  },
+  {
+    "id": 503,
+    "department": "PainDraw",
+    "fio": "Драгун Ф.М.",
+    "position": "зав. мет. фонд.",
+    "rank": "доц."
+  },
+  {
+    "id": 504,
+    "department": "PainDraw",
+    "fio": "Тишков В.П.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 505,
+    "department": "PainDraw",
+    "fio": "Кондратьев Д.В.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 506,
+    "department": "PainDraw",
+    "fio": "Витковская В.Г.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 507,
+    "department": "PainDraw",
+    "fio": "Кветковский А.А.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 508,
+    "department": "PainDraw",
+    "fio": "Шаппо К.Ю.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 509,
+    "department": "PainDraw",
+    "fio": "Ковально Д.И.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 510,
+    "department": "PainDraw",
+    "fio": "Чирко О.К.",
+    "position": "маг.",
+    "rank": "ст.преп."
+  },
+  {
+    "id": 511,
+    "department": "PainDraw",
+    "fio": "Богаткина А.Ю.",
+    "position": "маг.",
+    "rank": "преп. стажер"
+  },
+
+
+  {
+    "id": 601,
+    "department": "Design",
+    "fio": "Литвинова А.А.",
+    "position": "зав. каф.",
+    "rank": "проф."
+  },
+  {
+    "id": 602,
+    "department": "Design",
+    "fio": "Иодо И.А.",
+    "position": "док. арх.",
+    "rank": "проф."
+  },
+  {
+    "id": 603,
+    "department": "Design",
+    "fio": "Березкина Л.В.",
+    "position": "док. арх.",
+    "rank": "проф."
+  },
+  {
+    "id": 604,
+    "department": "Design",
+    "fio": "Мазаник А.В.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 605,
+    "department": "Design",
+    "fio": "Ивановская Д.А.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 606,
+    "department": "Design",
+    "fio": "Войницкий П.В.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 607,
+    "department": "Design",
+    "fio": "Морозов Е.В.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 608,
+    "department": "Design",
+    "fio": "Веренич А.С.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 609,
+    "department": "Design",
+    "fio": "Белова О.В.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 610,
+    "department": "Design",
+    "fio": "Туровская Г.Е.",
+    "position": "канд.арх.",
+    "rank": "доц."
+  },
+  {
+    "id": 611,
+    "department": "Design",
+    "fio": "Дашкевич О.В.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 612,
+    "department": "Design",
+    "fio": "Телепнева О.В.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 613,
+    "department": "Design",
+    "fio": "Шипилов С.А.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 614,
+    "department": "Design",
+    "fio": "Веренич М.П.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 615,
+    "department": "Design",
+    "fio": "Юровкий А.Б.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 616,
+    "department": "Design",
+    "fio": "Дегтерев Д.В.",
+    "position": "маг.",
+    "rank": "ст. преп."
+  },
+  {
+    "id": 617,
+    "department": "Design",
+    "fio": "Вишнякова Е.Н.",
+    "position": "маг.",
+    "rank": "преп."
+  },
+  {
+    "id": 618,
+    "department": "Design",
+    "fio": "Слаук С.Я.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 619,
+    "department": "Design",
+    "fio": "Шамановский И.Г.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 620,
+    "department": "Design",
+    "fio": "Ангелова Л.В.",
+    "position": "маг.",
+    "rank": "ассист."
+  },
+  {
+    "id": 621,
+    "department": "Design",
+    "fio": "Курбако Е.В.",
+    "position": "маг.",
+    "rank": "пр.-стаж."
+  },
+  {
+    "id": 622,
+    "department": "Design",
+    "fio": "Гаранинова-Лазовская В.С.",
+    "position": "маг.",
+    "rank": "пр.-стаж."
+  }
+
+
+]

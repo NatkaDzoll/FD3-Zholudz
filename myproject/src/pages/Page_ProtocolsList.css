@@ -1,0 +1,68 @@
+.ProtocolList_table{
+    position: relative;
+    width: 100vw;
+    top: 10vh;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: calc(4px + 2vmin);
+    background-color:#eee;
+    border-spacing:5px;
+}
+
+.ProtocolList_tbody{
+
+}
+.Preview_title{
+    position: absolute;
+    bottom: 0.5vh;
+    left: 3vw;
+    display: block;
+    color: white;
+    font-size: calc(4px + 1vmin);
+    margin: auto;
+
+}
+.edit__button, .delete__button {
+    font-size: smaller;
+}
+.ProtocolList_tr{
+    border-bottom: solid #e4e4e4 2px;
+    border-top: solid #e4e4e4 1px;
+    height: 5vh;
+    font-size: smaller;
+
+}
+.ProtocolList_td{
+    font-size: smaller;
+}
+.ProtocolList_th{
+    width: 3vw;
+    padding: 10px;
+    font-size: smaller;
+}
+.ProtocolList_th:hover:nth-child(-n+3){
+    background-color: #a4a4a4;
+    font-size: smaller;
+}
+.ProtocolList_caption{
+    padding: 3px 7px;
+}
+
+.ProtocolList_input{
+    height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .ProtocolList_table{
+        position: absolute;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-size: smaller;
+    }
+    .ProtocolList_tbody{
+        width: 100vw;
+        float: right;
+    }
+
+}

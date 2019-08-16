@@ -1,0 +1,101 @@
+.inputList{
+    margin: 10px;
+    width: 35vw;
+    float: right;
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    font-size: calc(5px + 1.5vmin);
+}
+.textareaList{
+    display: block;
+    padding: 3px;
+    margin-left: 5px ;
+    width: 40vw;
+    float: right;
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    font-size: calc(4px + 1.5vmin);
+    text-align: left;
+}
+.textList{
+    float: right;
+    width: 90%;
+}
+
+.labelList{
+    display: inline-block;
+    text-align: left;
+ }
+.checkboxList{
+    display: block;
+    background-color: #42843f;
+    width: 20vw;
+}
+
+.NavigationLink{
+    display: block;
+    text-decoration: none;
+    padding: 1vh 0;
+    margin: 10px auto;
+    line-height: 50px;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif ;
+    font-size: 20px;
+    border: rgb(64, 90, 204) solid 5px;
+}
+
+.Protocol_td{
+    padding: 10px;
+    border-spacing: 0;
+    border: rgb(64, 90, 204) solid 1px;
+    font-family: "Calibri", Sans-Serif, sans-serif;
+    font-size: calc(6px + 1.5vmin);
+    font-weight: bolder;
+    color: #405acc;
+}
+
+.Protocol_Table{
+    padding-top: 2vh;
+    display:  table;
+    margin: 0 auto;
+    width: 55vw;
+    background-color:#eee;
+    border-spacing:5px;
+    }
+.Protocol_Row{
+    display:table-row;
+    width:auto;
+    font-size: smaller;
+}
+.Protocol_HeadCell{
+    font-weight: bolder;
+
+}
+
+.Protocol_Cell{
+    text-align: left;
+    display: inline-block;
+
+}
+@media screen and (max-width: 600px) {
+
+    .Protocol_Table{
+        padding-top: 0;
+        font-size: small;
+        width: 100%;
+        height: 80vh;
+    }
+    .Protocol_td{
+        font-size: smaller;
+}
+
+    .textareaList{
+        display: block;
+        height: 100%;
+        padding: 3px;
+        margin-left: 5px ;
+        width: 70vw;
+        font-family: "Calibri", Sans-Serif, sans-serif;
+        font-size: smaller;
+        text-align: left;
+
+    }
+}

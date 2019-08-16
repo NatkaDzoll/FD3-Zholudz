@@ -1,0 +1,80 @@
+.Menu_ul{
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+
+.Menu_button{
+    list-style: none;
+    padding: 25px;
+    margin: 2vh auto;
+    text-align: center;
+    height: 3vh;
+    background: #305475;
+    color: white;
+    font-size: calc(6px + 2vmin);
+    font-family: sans-serif;
+    line-height: normal;
+}
+
+.buttonMenu{
+    width: 100%;
+    list-style: none;
+    padding: 15px;
+    margin: 1vh auto;
+    text-align: center;
+    background-color: #909090;
+    color: white;
+    border: solid #909090;
+    font-size: calc(3px + 1.5vmin);
+    font-family: sans-serif;
+    line-height: normal;
+}
+.buttonMenu:hover{
+    background-color: #707070;
+    border: solid #707070;
+    font-weight: bold;
+
+}
+.navigation-menu{
+    list-style-type: none;
+    padding: 2vh;
+    margin: 0 auto;
+    border: #ececec solid 1px;
+    background-color: #f4f4f4;
+    font-size: calc(8px + 1.5vmin);
+    font-weight: bold;
+}
+
+.ActiveNavigationLink{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border: #405acc solid 5px;
+    /*outline: rgb(255, 186, 78) solid 5px;*/
+    background-color: rgb(64, 90, 204);
+}
+
+
+@media screen and (max-width: 600px) {
+    .navigation-menu{
+        position: fixed;
+
+    }
+    .add_title{
+        display: none;
+    }
+    .Menu_ul {
+
+        width: auto;
+        display: inline-block;
+        padding: 0;
+    }
+    .buttonMenu{
+        width: 100%;
+        padding: 1px;
+        margin: 0 auto;
+        font-size: calc(6px + 1.5vmin);
+
+    }
+}

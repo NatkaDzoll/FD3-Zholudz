@@ -1,0 +1,25 @@
+.Protocol_control{
+    top: 10vh;
+    background-color: #405acc;
+    padding: 0;
+    text-align: right;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.Protocol_nav{
+    float: right;
+    text-decoration: none;
+    background-color: #39c772;
+    color: white;
+}
+
+.ActivePageLink {
+    background: rgb(64, 90, 204);
+    color: white;
+    font-weight: bold;
+    border:  #405acc solid 0px;
+    /*    float: left;*/
+}
+

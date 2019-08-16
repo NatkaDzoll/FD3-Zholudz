@@ -1,0 +1,29 @@
+.Main_Table{
+    padding: 0;
+    position: relative;
+    top: 11vh;
+    border-collapse: collapse;
+    margin: 1vh auto;
+    width: 80vw;
+    height: 70vh;
+    background-color:#eee;
+    border-spacing:5px;
+    text-align: justify;
+    overflow: auto;
+    font-size: small;
+
+}
+.Main_box{
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+
+}
+
+@media screen and (max-width: 600px) {
+    .Main_Table {
+        top: 9vh;
+        width: 100vw;
+        height: 80vh;
+    }
+}
