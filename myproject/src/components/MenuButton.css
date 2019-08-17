@@ -7,7 +7,7 @@
 .Menu_button{
     list-style: none;
     padding: 25px;
-    margin: 2vh auto;
+    margin: 2vw auto;
     text-align: center;
     height: 3vh;
     background: #305475;
@@ -37,9 +37,8 @@
 
 }
 .navigation-menu{
-    list-style-type: none;
-    padding: 2vh;
-    margin: 0 auto;
+    margin: 1vw auto;
+    padding: 0;
     border: #ececec solid 1px;
     background-color: #f4f4f4;
     font-size: calc(8px + 1.5vmin);
@@ -56,11 +55,8 @@
 }
 
 
-@media screen and (max-width: 600px) {
-    .navigation-menu{
-        position: fixed;
+@media screen and (max-width: 640px) {
 
-    }
     .add_title{
         display: none;
     }

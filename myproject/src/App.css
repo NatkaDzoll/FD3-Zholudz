@@ -44,9 +44,11 @@
 
 @media {
   .App-header {
+    width: 100vw;
     font-size: calc(4px + 2vmin);
   }
   .App-main {
+    width: 100vw;
     top: 9vh;
     height: 100%;
   }

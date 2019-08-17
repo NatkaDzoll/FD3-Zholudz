@@ -52,7 +52,7 @@
     height: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .ProtocolList_table{
         position: absolute;
         width: 100vw;

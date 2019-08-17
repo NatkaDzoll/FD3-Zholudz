@@ -16,11 +16,11 @@
 .Main_box{
     position: relative;
     margin: 0 auto;
-    width: 80vw;
+    width: 100vw;
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .Main_Table {
         top: 9vh;
         width: 100vw;
