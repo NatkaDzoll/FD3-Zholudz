@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 import {block_updateAC} from "../../redux/protocolAC";
 
 class BlockNumber_Edit extends React.PureComponent {

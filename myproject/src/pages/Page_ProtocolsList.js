@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Page_ProtocolsList.css'
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 import Protocol from "../components/Protocol";
 import {  protocol_list_sortAC} from "../redux/protocolsListAC";
 import {protocol_createAC} from "../redux/protocolAC";

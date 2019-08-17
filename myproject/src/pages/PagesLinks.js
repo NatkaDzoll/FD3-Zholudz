@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from './pencil_color_blue.ico';
 import './PagesLinks.css';
 import {protocol_createAC} from "../redux/protocolAC";
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 
 class PagesLinks extends React.Component {
 

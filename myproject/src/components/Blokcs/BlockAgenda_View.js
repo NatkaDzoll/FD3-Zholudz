@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import connect from "react-redux/es/connect/connect";
-
+import {connect} from "react-redux";
 class BlockAgenda_View extends React.PureComponent {
 
   static propTypes = {

@@ -2,7 +2,7 @@ import React from 'react';
 import './Page_Main.css';
 import {protocol_list_errorAC, protocol_list_loadingAC, protocol_list_setAC} from "../redux/protocolsListAC";
 import isoFetch from "isomorphic-fetch";
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 
 class Page_Main extends React.PureComponent {
    componentWillMount() {

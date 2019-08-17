@@ -3,7 +3,7 @@ import './Page_ProtocolRedact.css';
 import '../components/MenuButton.css';
 import MenuButton from "../components/MenuButton";
 
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 import BlockDate_Edit from "../components/Blokcs/BlockDate_Edit";
 import BlockNumber_Edit from "../components/Blokcs/BlockNumber_Edit";
 import BlockDepartment_Edit from "../components/Blokcs/BlockDepartment_Edit";

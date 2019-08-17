@@ -4,7 +4,7 @@ import departments from  '../dataDepartments'
 
 import { protocol_redactAC, protocol_setAC} from "../redux/protocolAC";
 import {withRouter} from "react-router-dom";
-import connect from "react-redux/es/connect/connect";
+import {connect} from "react-redux";
 import {protocol_deleteAC} from "../redux/protocolsListAC";
 
 // -------- ФУНКЦИЯ ПОЛУЧЕНИЯ ПОЛНОГО НАЗВАНИЯ КАФЕДРЫ ------------
